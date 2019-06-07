@@ -1,4 +1,4 @@
-var words = ["APPLE", "BANANA", "CHERRY"]  
+var words = ["BANANA", "CHERRY"]  
 var usableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var playing = true;
@@ -62,22 +62,28 @@ function getUserGuess(event) {
   var userGuess = event.key;   //get a letter that user pressed. 
   if(usableLetters.indexOf(userGuess) >= 0 ) {   //when user press one of the usableLetters.
     document.getElementById("message").innerHTML = "Keep guessing!";
-    result = chosenWord.indexOf(userGuess);  //get the index number of chosenWord. Get -1 if userGuess is not one of the letters of chosenWord.
+
+    var result = chosenWord.indexOf(userGuess);  //get the index number of chosenWord. Get -1 if userGuess is not one of the letters of chosenWord.
 
     //if ueserGuess is correct (is one of the letters of the chosenWord),
-    //need to fix a bug!
-    if (result > -1) {  
-      underScore.splice(result, 1, userGuess);  //remove underScore and replace with userGuess
-      document.getElementById("underScore").innerHTML = underScore.join(" ").toUpperCase();  //print underScore array to the P tag as strings!  
-      document.getElementById("guessRemain").textContent--;   //reduce the number of guess remaining by 1. //.textContent method gets the content of the element
-    } 
+    if (result > -1) { 
+
+      for (var j = 0; j < chosenWord.length; j++) {
+        var resultCorrect = chosenWord.indexOf(userGuess, j); 
+
+        if (resultCorrect > -1){
+          underScore.splice(resultCorrect, 1, userGuess);  //remove underScore and replace with userGuess
+          document.getElementById("underScore").innerHTML = underScore.join(" ").toUpperCase();  //print underScore array to the P tag as strings!  
+        } 
+      }
+    }
 
     //if userGuess is wrong,
     var targetLettersGuessed = document.getElementById("lettersGuessed");  //to avoid showing the same letter to #lettersGuessed
-    var resultForAlreadyGuessed = targetLettersGuessed.textContent.indexOf(userGuess);  //to avoid showing the same letter to #lettersGuessed
+    var resultForAlreadyGuessed = targetLettersGuessed.textContent.indexOf(userGuess);  //to avoid showing the same letter to #lettersGuessed  
     if (result === -1 && resultForAlreadyGuessed < 0) {
-      targetLettersGuessed.innerHTML += userGuess + " ";   //add userGuess to #lettersGuessed      
-      document.getElementById("guessRemain").textContent--;   //reduce the number of guess remaining by 1. //.textContent method gets the content of the element.
+      targetLettersGuessed.innerHTML += userGuess + " ";   //add userGuess to #lettersGuessed    
+      document.getElementById("guessRemain").textContent--;   //reduce the number of guess remaining by 1. //.textContent method gets the content of the element.  
     } 
 
     //if used up all guesses,
@@ -93,7 +99,7 @@ function getUserGuess(event) {
       document.getElementById("wins").textContent++;
       document.getElementById("message").innerHTML = "You win :) Wanna try another word? Click Enter!";
       playing = false;
-    }    
+    }   
 
     //disable the game and enable the enter key to reset the game
     if (playing === false) { 
@@ -115,7 +121,3 @@ document.addEventListener('DOMContentLoaded', function (){
   initialize();
   console.log("initialized!");
 });
-
-
-
-
