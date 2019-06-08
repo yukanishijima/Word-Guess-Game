@@ -5,7 +5,7 @@ var playing = true;
 
 var wins = 0;
 var losses = 0;
-var guess = 7;   //5 for test, change to 20
+var guess = 10;   
 var guessRemain = guess;
 
 var chosenWord = "";
@@ -14,7 +14,7 @@ var underScore = [];
 
 // choose random words and put _ on the page
 function selectRandomWord() {
-  var max = words.length - 1;
+  var max = words.length;
   var randomNum = Math.floor(Math.random() * max);  //return a random number of the array.
   chosenWord = words[randomNum].toLowerCase();  //return a random word from the array.
   letters = chosenWord.split('');   //split a word into an array of letters
@@ -31,7 +31,7 @@ function selectRandomWord() {
 //initialize the game
 function initialize() {
   //set the numbers of guess remaining. 
-  document.getElementById("guessRemain").textContent = guess; //20
+  document.getElementById("guessRemain").textContent = guess; 
   //show the starting message.
   document.getElementById("message").innerHTML = "Press any key to start!";
   //delete letters already guessed
@@ -99,6 +99,7 @@ function getUserGuess(event) {
       document.getElementById("wins").textContent++;
       document.getElementById("message").innerHTML = "You win :) Way to go! <br> Click Enter to try again!";
       playing = false;
+      changeImage(chosenWord);
     }   
 
     //disable the game and enable the enter key to reset the game
@@ -113,6 +114,44 @@ function getUserGuess(event) {
 function resetGame(event) {
   if (event.keyCode === 13) {
     initialize();
+  }
+}
+
+//change image when user get correct word
+function changeImage(chosenWord) {
+  if (chosenWord == "leonald") {
+    document.querySelector("#image").setAttribute("src", "assets/images/leonard.png");
+    document.querySelector("#image").setAttribute("alt", "leonald");
+  } else if (chosenWord == "gasol") {
+    document.querySelector("#image").setAttribute("src", "assets/images/gasol.png");
+    document.querySelector("#image").setAttribute("alt", "gasol");
+  } else if (chosenWord == "lowry") {
+    document.querySelector("#image").setAttribute("src", "assets/images/lowry.png");
+    document.querySelector("#image").setAttribute("alt", "lowry");
+  } else if (chosenWord == "green") {
+    document.querySelector("#image").setAttribute("src", "assets/images/green.png");
+    document.querySelector("#image").setAttribute("alt", "green");
+  } else if (chosenWord == "ibaka") {
+    document.querySelector("#image").setAttribute("src", "assets/images/ibaka.png");
+    document.querySelector("#image").setAttribute("alt", "ibaka");
+  } else if (chosenWord == "siakam") {
+    document.querySelector("#image").setAttribute("src", "assets/images/siakam.png");
+    document.querySelector("#image").setAttribute("alt", "siakam");
+  } else if (chosenWord == "vanvleet") {
+    document.querySelector("#image").setAttribute("src", "assets/images/vanvleet.png");
+    document.querySelector("#image").setAttribute("alt", "vanvleet");
+  } else if (chosenWord == "anunoby") {
+    document.querySelector("#image").setAttribute("src", "assets/images/anunoby.png");
+    document.querySelector("#image").setAttribute("alt", "anunoby");
+  } else if (chosenWord == "lin") {
+    document.querySelector("#image").setAttribute("src", "assets/images/lin.png");
+    document.querySelector("#image").setAttribute("alt", "lin");
+  } else if (chosenWord == "powell") {
+    document.querySelector("#image").setAttribute("src", "assets/images/powell.png");
+    document.querySelector("#image").setAttribute("alt", "powell");
+  } else if (chosenWord == "nurse") {
+    document.querySelector("#image").setAttribute("src", "assets/images/nurse.png");
+    document.querySelector("#image").setAttribute("alt", "nurse");
   }
 }
 
