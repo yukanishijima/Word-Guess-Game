@@ -90,14 +90,14 @@ function getUserGuess(event) {
     if ((letters.toString() != underScore.toString()) && (document.getElementById("guessRemain").textContent == 0)) {
       //if letters != underScore && guessRemain === 0,
       document.getElementById("losses").textContent++;
-      document.getElementById("message").innerHTML = "You lost :( Click Enter to try again!";
+      document.getElementById("message").innerHTML = "You lost :( <br> Click Enter to try again!";
       playing = false;
     }
 
     //if user guess a chosenWord correctly, 
     if (letters.toString() == underScore.toString() && (document.getElementById("guessRemain").textContent >= 0)) {  //if array of letters and array of underScore are the same,
       document.getElementById("wins").textContent++;
-      document.getElementById("message").innerHTML = "You win :) Way to go!";
+      document.getElementById("message").innerHTML = "You win :) Way to go! <br> Click Enter to try again!";
       playing = false;
     }   
 

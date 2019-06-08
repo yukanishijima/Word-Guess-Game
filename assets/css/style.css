@@ -117,9 +117,9 @@ body, h1, h2, h3, p {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.3);
   /* background: rgba(70, 53, 53, 0.57); */
-  border: 5px solid black;
+  /* border: 5px solid black; */
   z-index: 1;
 }
 .content {
@@ -135,7 +135,7 @@ body, h1, h2, h3, p {
 ------------------------------------- */
 header {
   text-align: center;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 header h1 {
   font-size: 20px;
@@ -143,20 +143,18 @@ header h1 {
   font-weight: 100;
 }
 header h2 {
-  font-size: 40px;
-  font-family: 'Faster One', cursive;
-  transform: scale(0.9, 1.3);
+  font-size: 48px;
+  font-family: 'Abril Fatface', cursive;
+  text-transform: none;
   margin-top: 6px;
-
-  /* font-family: 'Berkshire Swash', cursive; */
 }
 
 /* Image
 ------------------------------------- */
 img {
-  width: 150px;
+  width: 130px;
   height: 100%;
-  margin: 30px auto;
+  margin: 20px auto;
   display: block;
 }
 
@@ -164,14 +162,25 @@ img {
 ------------------------------------- */
 .container {
   text-align: center;
+  max-width: 320px;
+  width: 300px;
+  margin: 0 auto;
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
 }
 h3 {
   display: inline-block;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
+  border-bottom: 1px solid white;
   padding-bottom: 10px;
   font-weight: 200;
   font-size: 19px;
-  text-transform: none;
+  line-height: 1.5em;
+  /* text-transform: none; */
+  /* font-family: 'Playfair Display', serif; */
 }
 .current-word {
   margin: 30px 0;
@@ -186,7 +195,7 @@ h3 {
 .container2, .container3 {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 20px 0 0px;
 }
 .content1, .content2, .content3, .content4 {
   width: 50%;
@@ -196,4 +205,63 @@ h3 {
 }
 .content1 p, .content2 p {
   font-size: 15px;
+}
+span {
+  font-weight: 400;
+  font-size: 25px;
+  position: relative;
+}
+span:before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+/* For wider screen size
+------------------------------------- */
+@media screen and (min-width: 576px) {
+  header h1 {
+    font-size: 23px;
+  }
+  header h2 {
+    font-size: 70px;
+  }
+  img {
+    width: 180px;
+  }
+  .container {
+    width: 420px;
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 900px) {
+  header {
+    margin: 50px auto;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    max-width: 900px;
+  }
+  .container {
+    width: 50%;
+    margin: 0;
+    padding: 30px;
+  }
+  .container2, .container3 {
+    margin: 20px 0 10px;
+  }
+  img {
+    width: 40%;
+    margin: 0;
+    margin-right: 15px;
+    padding: 35px;
+  }
 }
