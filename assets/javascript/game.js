@@ -1,11 +1,11 @@
-var words = ["BANANA", "CHERRY"]  
+var words = ["LEONALD", "GASOL", "LOWRY", "GREEN", "IBAKA", "SIAKAM", "VANVLEET", "ANUNOBY", "LIN", "POWELL", "NURSE"]  
 var usableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var playing = true;
 
 var wins = 0;
 var losses = 0;
-var guess = 5;   //5 for test, change to 20
+var guess = 7;   //5 for test, change to 20
 var guessRemain = guess;
 
 var chosenWord = "";
