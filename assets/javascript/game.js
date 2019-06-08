@@ -97,7 +97,7 @@ function getUserGuess(event) {
     //if user guess a chosenWord correctly, 
     if (letters.toString() == underScore.toString() && (document.getElementById("guessRemain").textContent >= 0)) {  //if array of letters and array of underScore are the same,
       document.getElementById("wins").textContent++;
-      document.getElementById("message").innerHTML = "You win :) Wanna try another word? Click Enter!";
+      document.getElementById("message").innerHTML = "You win :) Way to go!";
       playing = false;
     }   
 
