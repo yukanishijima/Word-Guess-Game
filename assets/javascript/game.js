@@ -90,7 +90,7 @@ function getUserGuess(event) {
     if ((letters.toString() != underScore.toString()) && (document.getElementById("guessRemain").textContent == 0)) {
       //if letters != underScore && guessRemain === 0,
       document.getElementById("losses").textContent++;
-      document.getElementById("message").innerHTML = "You lost :( Try again! Click Enter!";
+      document.getElementById("message").innerHTML = "You lost :( Click Enter to try again!";
       playing = false;
     }
 
