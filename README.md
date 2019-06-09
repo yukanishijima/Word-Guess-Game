@@ -1,5 +1,7 @@
 ## Word-Guess-Game
 
+[Live](https://yukanishijima.github.io/Word-Guess-Game/)
+
 ### Instructions
 
 #### Option Two: Word Guess Game (Challenge - Recommended)
