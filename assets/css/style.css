@@ -139,17 +139,37 @@ header h1 {
   font-family: 'Overpass', sans-serif;
   font-weight: 100;
 }
+.year {
+  margin-top: 5px;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+}
+.year:before, .year:after {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: black;
+  position: absolute;
+  top: 50%;
+}
+.year:before {
+  left: -30px;
+}
+.year:after {
+  right: -30px;
+}
+
 header h2 {
   font-size: 45px;
   font-family: 'Abril Fatface', cursive;
   text-transform: none;
-  margin-top: 6px;
 }
 
 /* Image
 ------------------------------------- */
 img {
-  height: 130px;
+  height: 125px;
   margin: 20px auto;
   display: block;
   object-fit: contain;
@@ -169,11 +189,10 @@ img {
 }
 h3 {
   display: inline-block;
-  /* border-bottom: 1px solid black; */
   border-bottom: 1px solid white;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-weight: 200;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.5em;
 }
 .current-word {
@@ -189,7 +208,7 @@ h3 {
 .container2, .container3 {
   display: flex;
   justify-content: center;
-  margin: 20px 0 0px;
+  margin: 13px 0 0px;
 }
 .content1, .content2, .content3, .content4 {
   width: 50%;
@@ -228,7 +247,8 @@ span:before {
     font-size: 70px;
   }
   img {
-    height: 180px;
+    height: 170px;
+    margin: 15px auto;
   }
   .container {
     width: 420px;
@@ -238,7 +258,7 @@ span:before {
     font-size: 15px;
   }
 }
-@media screen and (min-width: 900px) {
+/* @media screen and (min-width: 900px) {
   header {
     margin: 50px auto;
   }
@@ -265,4 +285,4 @@ span:before {
     margin-right: 20px;
     padding: 30px;
   }
-}
+} */
