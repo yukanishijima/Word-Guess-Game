@@ -208,7 +208,7 @@ h3 {
 .container2, .container3 {
   display: flex;
   justify-content: center;
-  margin: 13px 0 0px;
+  margin: 10px 0 0px;
 }
 .content1, .content2, .content3, .content4 {
   width: 50%;
@@ -224,7 +224,7 @@ h3 {
 }
 span {
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
 }
 span:before {
