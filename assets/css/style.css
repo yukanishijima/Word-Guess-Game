@@ -170,7 +170,7 @@ header h2 {
 ------------------------------------- */
 img {
   height: 125px;
-  margin: 20px auto;
+  margin: 23px auto;
   display: block;
   object-fit: contain;
 }
@@ -187,13 +187,25 @@ img {
   padding: 15px;
   border-radius: 20px;
 }
+.wrap {
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid white;
+  width: 90%;
+  margin: 0 auto;
+}
 h3 {
   display: inline-block;
-  border-bottom: 1px solid white;
   padding-bottom: 5px;
   font-weight: 200;
   font-size: 18px;
   line-height: 1.5em;
+
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .current-word {
   margin: 30px 0;
@@ -224,7 +236,7 @@ h3 {
 }
 span {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 15px;
   position: relative;
 }
 span:before {
@@ -256,6 +268,9 @@ span:before {
   }
   .content1 p, .content2 p, .content3 p, .content4 p {
     font-size: 15px;
+  }
+  span {
+    font-size: 20px;
   }
 }
 /* @media screen and (min-width: 900px) {
