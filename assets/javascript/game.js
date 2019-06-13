@@ -1,4 +1,4 @@
-var words = ["LEONALD", "GASOL", "LOWRY", "GREEN", "IBAKA", "SIAKAM", "VANVLEET", "ANUNOBY", "LIN", "POWELL", "NURSE"]  
+var words = ["LEONARD", "GASOL", "LOWRY", "GREEN", "IBAKA", "SIAKAM", "VANVLEET", "ANUNOBY", "LIN", "POWELL", "NURSE"]  
 var usableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var playing = true;
@@ -119,9 +119,9 @@ function resetGame(event) {
 
 //change image when user get correct word
 function changeImage(chosenWord) {
-  if (chosenWord == "leonald") {
+  if (chosenWord == "leonard") {
     document.querySelector("#image").setAttribute("src", "assets/images/leonard.png");
-    document.querySelector("#image").setAttribute("alt", "leonald");
+    document.querySelector("#image").setAttribute("alt", "leonard");
   } else if (chosenWord == "gasol") {
     document.querySelector("#image").setAttribute("src", "assets/images/gasol.png");
     document.querySelector("#image").setAttribute("alt", "gasol");
