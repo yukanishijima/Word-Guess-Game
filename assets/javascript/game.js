@@ -119,40 +119,8 @@ function resetGame(event) {
 
 //change image when user get correct word
 function changeImage(chosenWord) {
-  if (chosenWord == "leonard") {
-    document.querySelector("#image").setAttribute("src", "assets/images/leonard.png");
-    document.querySelector("#image").setAttribute("alt", "leonard");
-  } else if (chosenWord == "gasol") {
-    document.querySelector("#image").setAttribute("src", "assets/images/gasol.png");
-    document.querySelector("#image").setAttribute("alt", "gasol");
-  } else if (chosenWord == "lowry") {
-    document.querySelector("#image").setAttribute("src", "assets/images/lowry.png");
-    document.querySelector("#image").setAttribute("alt", "lowry");
-  } else if (chosenWord == "green") {
-    document.querySelector("#image").setAttribute("src", "assets/images/green.png");
-    document.querySelector("#image").setAttribute("alt", "green");
-  } else if (chosenWord == "ibaka") {
-    document.querySelector("#image").setAttribute("src", "assets/images/ibaka.png");
-    document.querySelector("#image").setAttribute("alt", "ibaka");
-  } else if (chosenWord == "siakam") {
-    document.querySelector("#image").setAttribute("src", "assets/images/siakam.png");
-    document.querySelector("#image").setAttribute("alt", "siakam");
-  } else if (chosenWord == "vanvleet") {
-    document.querySelector("#image").setAttribute("src", "assets/images/vanvleet.png");
-    document.querySelector("#image").setAttribute("alt", "vanvleet");
-  } else if (chosenWord == "anunoby") {
-    document.querySelector("#image").setAttribute("src", "assets/images/anunoby.png");
-    document.querySelector("#image").setAttribute("alt", "anunoby");
-  } else if (chosenWord == "lin") {
-    document.querySelector("#image").setAttribute("src", "assets/images/lin.png");
-    document.querySelector("#image").setAttribute("alt", "lin");
-  } else if (chosenWord == "powell") {
-    document.querySelector("#image").setAttribute("src", "assets/images/powell.png");
-    document.querySelector("#image").setAttribute("alt", "powell");
-  } else if (chosenWord == "nurse") {
-    document.querySelector("#image").setAttribute("src", "assets/images/nurse.png");
-    document.querySelector("#image").setAttribute("alt", "nurse");
-  }
+  document.querySelector("#image").setAttribute("src", "assets/images/" + chosenWord + ".png");
+  document.querySelector("#image").setAttribute("alt", chosenWord);
 }
 
 //when the DOM loaded, start the game!
